@@ -1,0 +1,71 @@
+.carousel {
+    $thumb-width: 260px;
+    margin: 0 90px;
+    &__item {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__thumb {
+            width: $thumb-width;
+            height: $thumb-width;
+            position: relative;
+            .preload-img {
+                z-index: -1;
+            }
+            .img {
+                position: absolute;
+                top: 50%;
+                height: 100%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+        &__title {
+            margin-top: 50px;
+            font-family: $font-main-ubold;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    .flickity-button:disabled {
+        display: none;
+    }
+    .flickity-prev-next-button {
+        top: calc(#{$thumb-width} / 2);
+        width: 28px;
+        height: 54px;
+        border-radius: 0px;
+        background: #bfdfec;
+        border: none;
+        box-shadow: 0 2px 10px rgba(54, 54, 54, 0.15);
+        transition: background 0.15s ease-in-out, opacity 0.15s ease-in-out,
+            transform 0.2s ease-in-out;
+        &:hover {
+            background: #bfdfec;
+            transform: scale(1.1) translateY(-50%);
+        }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        svg {
+            stroke-width: 1px;
+            stroke: $color-1;
+            fill: $color-1;
+        }
+        &.previous {
+            left: -50px;
+            &:hover svg {
+                animation: buttonFromRightToLeft 0.5s ease-in-out forwards;
+            }
+        }
+        &.next {
+            right: -50px;
+            &:hover svg {
+                animation: buttonFromLeftToRight 0.5s ease-in-out forwards;
+            }
+        }
+    }
+}

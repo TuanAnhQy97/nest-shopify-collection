@@ -1,0 +1,168 @@
+.section-capsules {
+    padding-left: 80px;
+    padding-right: 30px;
+    margin-top: 40px;
+    &__inner {
+        display: flex;
+        margin-top: 60px;
+    }
+    .left-filter {
+        position: sticky;
+        top: 160px;
+        width: 200px;
+        flex-shrink: 0;
+        align-self: flex-start;
+        margin-right: 26px;
+    }
+    .collapsible-item {
+        &__btn {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            background-color: transparent;
+            padding: 20px 0;
+            &__title {
+            }
+        }
+        &__content {
+            overflow: hidden;
+            &.collapsed {
+            }
+        }
+        &__list {
+            &-item {
+                position: relative;
+                color: #4495d1;
+                cursor: pointer;
+                letter-spacing: 2px;
+                font-family: $font-main-light;
+                font-size: 16px;
+                margin-bottom: 20px;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;
+                    top: calc(50% - 3px);
+                    left: 0;
+                    border-radius: 100%;
+                    background: #234d6b;
+                    opacity: 0;
+                    -webkit-transition: opacity 0.1s ease-in-out;
+                    transition: opacity 0.1s ease-in-out;
+                }
+                &.is-selected {
+                    padding-left: 18px;
+                    color: #234d6b;
+                }
+                &.is-selected::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .right-list {
+        flex-grow: 1;
+        .product-item {
+            $vertical-gutter: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            &__thumb {
+                cursor: pointer;
+                position: relative;
+                .preload-img {
+                    z-index: -1;
+                }
+                .img {
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+            &__badge {
+                z-index: 2;
+                padding: 4px 6px;
+                color: white;
+                font-size: 13px;
+                background-color: $color-3;
+                position: absolute;
+                left: 0;
+                top: 10px;
+            }
+            &__flavor {
+                cursor: pointer;
+                margin-top: $vertical-gutter;
+                margin-bottom: $vertical-gutter;
+            }
+            &__title {
+                cursor: pointer;
+                margin-bottom: $vertical-gutter;
+            }
+            &__location {
+                font-size: 12px;
+                letter-spacing: 0.2em;
+                font-family: $font-main-light;
+                font-weight: 900;
+                margin-bottom: $vertical-gutter;
+            }
+            &__add-btn {
+                padding: 13px 20px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &__title {
+                }
+                &__dot {
+                    display: inline-block;
+                    margin: 0 18px;
+                    content: '';
+                    height: 3px;
+                    width: 3px;
+                    border-radius: 100%;
+                    background: currentColor;
+                }
+                &__price {
+                }
+            }
+        }
+    }
+}
+
+.sub-nav {
+    position: sticky;
+    background-color: $main-background;
+    z-index: 3;
+    top: 60px;
+    border-bottom: 1px solid $color-1;
+    & > .row {
+        align-items: center;
+        div[class^='col'] {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    .layout-switch {
+        button {
+            width: 20px;
+        }
+        &__two {
+            margin-right: 10px;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        &__icon {
+            width: 70px;
+        }
+        &__title {
+            margin-left: 5px;
+            font-family: $font-main-light;
+        }
+    }
+}

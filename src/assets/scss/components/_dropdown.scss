@@ -1,0 +1,100 @@
+$dropdown-width: 16rem;
+$text-size: 1.4rem;
+.ct-select {
+    position: relative;
+    button {
+        height: 4rem;
+        background-color: rgba(11, 66, 26, 0.5);
+        display: flex;
+        align-items: center;
+        padding: 1rem 4rem 1rem 2rem;
+        margin-left: -0.1rem;
+        border: 0.1rem solid white;
+        border-radius: 1rem;
+        width: $dropdown-width;
+        white-space: nowrap;
+        cursor: pointer;
+        position: relative;
+        color: white;
+        font-size: $text-size;
+        &:focus {
+            outline: none;
+
+            & ~ .select-ul {
+                display: block;
+            }
+        }
+    }
+    img {
+        width: 2rem;
+        margin-right: 1rem;
+    }
+    .default-option:before {
+        content: '';
+        position: absolute;
+        top: 1.4rem;
+        right: 1.6rem;
+        width: 0.8rem;
+        height: 0.8rem;
+        border: solid white;
+        border-width: 0 0.2rem 0.2rem 0;
+        transform: rotate(45deg);
+        transition: all 0.2s ease-out;
+    }
+    .select-ul {
+        width: $dropdown-width;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 0;
+        overflow: hidden;
+        cursor: pointer;
+        list-style: none;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        background: white;
+        border-radius: 0.5rem;
+        transform: translateY(-0.8rem);
+        box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.15);
+        transition: all 0.2s ease-in;
+        max-height: 30rem;
+        overflow-y: auto;
+        &::-webkit-scrollbar-track {
+            border-radius: 0.5rem;
+        }
+        &::-webkit-scrollbar {
+            width: 0.4rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #dfdfdf;
+            border-radius: 0.5rem;
+            &:hover {
+                background: rgb(199, 199, 199);
+            }
+        }
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            font-size: $text-size;
+            text-align: center;
+            transition: background-color 0.2s ease-in;
+            &:hover {
+                background-color: rgb(215, 255, 227) !important;
+            }
+        }
+    }
+    &.active {
+        .select-ul {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+            z-index: 1;
+        }
+        button.default-option:before {
+            top: 1.8rem;
+            transform: rotate(225deg);
+        }
+    }
+}

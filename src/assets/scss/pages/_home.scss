@@ -1,0 +1,149 @@
+.section-features-primary {
+    margin-top: 5rem;
+    padding-top: $nav-height;
+    background: linear-gradient(180deg, #f2f5f5 0%, #e8f0ee 100%);
+    padding-bottom: 15rem;
+}
+.section-features-secondary {
+    padding-top: 25rem;
+    margin-bottom: 5rem;
+    position: relative;
+
+    &__text-box {
+        padding: 0 5rem;
+    }
+    &__main-thumb-box {
+        position: absolute;
+        width: 55%;
+        top: -5rem;
+        @include respond(tab-port) {
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .row:nth-child(3) {
+        background: url(/images/section-specs-main-thumb.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+        @include respond(tab-port) {
+            height: 30rem;
+        }
+    }
+    @include respond(tab-port) {
+        padding-top: 5rem;
+    }
+    @include respond(phone) {
+        &__text-box {
+            padding: 0;
+        }
+    }
+}
+.section-catergories {
+    padding-top: $nav-height;
+    padding-bottom: 10rem;
+    .heading-secondary ~ p {
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+}
+.section-review {
+    padding-top: $nav-height;
+    background-image: url(/images/section-review-background.png), linear-gradient(180deg, #f2f5f5 0%, #e8f0ee 100%);
+    background-size: 35rem, contain;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 15rem;
+    &__details {
+        // padding-left: 32rem;
+        display: flex;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    @include respond(tab-land) {
+        background-image: linear-gradient(180deg, #f2f5f5 0%, #e8f0ee 100%);
+        background-size: 100%;
+        &__details {
+            padding-left: 0;
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+    @include respond(tab-port) {
+        padding-bottom: 8rem;
+        &__details {
+            flex-direction: column;
+        }
+    }
+    @include respond(phone) {
+        background-image: linear-gradient(180deg, #f2f5f5 0%, #e8f0ee 100%);
+    }
+}
+.section-pricing {
+    padding-top: $nav-height;
+    margin-bottom: 10rem;
+    &__key-values {
+        background-image: url(/images/key-features.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 55rem;
+        height: 55rem;
+        position: relative;
+        @include respond(tab-land) {
+            background-size: 40rem;
+        }
+        @include respond(tab-port) {
+            padding-top: 50rem;
+        }
+        @include respond(phone) {
+            background-size: contain;
+        }
+    }
+    &__key-value {
+        position: absolute;
+        max-width: 25%;
+        &--1 {
+            top: 7rem;
+            left: 7rem;
+        }
+        &--2 {
+            top: 22rem;
+            right: 0rem;
+        }
+        &--3 {
+            bottom: 10rem;
+            left: 7rem;
+        }
+        @include respond(tab-port) {
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            &--1 {
+                top: 0;
+                left: 0;
+            }
+            &--2 {
+                top: 0;
+                right: 0;
+            }
+            &--3 {
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
+.section-contact {
+    padding-top: $nav-height;
+    background-color: #f2f5f5;
+    padding-bottom: 10rem;
+    .row:nth-child(3) {
+        margin-bottom: 0;
+    }
+    .row:nth-child(4) {
+        padding-top: calc(#{$nav-height} + 5rem);
+    }
+}

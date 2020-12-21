@@ -1,0 +1,74 @@
+.footer {
+    background-color: $color-2;
+    padding: 30px 50px 50px;
+    &__morning-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .email-section {
+        &__heading {
+            font-family: $font-main-ubold;
+            font-size: 28px;
+            margin-bottom: 26px;
+        }
+        &__description {
+            font-size: 14px;
+        }
+        &__form {
+            margin-top: 30px;
+            display: flex;
+            input {
+                font-size: 16px;
+                padding: 12px 14px;
+                max-width: 320px;
+                width: 100%;
+                border: none;
+                background: white;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    font-size: 14px;
+                    color: black;
+                    font-family: $font-main-regular;
+                }
+            }
+            button {
+                padding: 0 28px;
+            }
+        }
+        &__link {
+            cursor: pointer;
+            font-family: $font-main-ubold;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+            &:hover {
+                color: $color-3;
+            }
+            transition: color ease-in 0.2s;
+        }
+        &__icon-list {
+            display: flex;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        &__icon {
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+            margin-right: 20px;
+        }
+        &__company {
+            font-size: 14px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-family: $font-main-light;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.section-collection {
+    padding-left: 80px;
+    padding-top: 80px;
+    &__heading {
+        margin-top: 60px;
+        font-family: $font-main-ubold;
+        font-size: 36px;
+        line-height: 45px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    &__sub-heading {
+        font-family: $font-main-light;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+    &__description {
+        font-family: $font-main-light;
+        line-height: 1.65;
+        text-align: justify;
+        &::after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid;
+            padding-top: 75px;
+            width: 35%;
+            margin-left: 60%;
+        }
+    }
+    .carousel {
+        margin-top: 30px;
+    }
+}

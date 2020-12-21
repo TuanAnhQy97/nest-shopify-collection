@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            @font-face {
+                font-family: 'GT-Eesti-Pro-Text-Light';
+                src: url('/../../../../public/font/GTEestiProDisplay-Light.ttf')
+                    format('truetype'); /* Safari, Android, iOS */
+            }
+
+            @font-face {
+                font-family: 'GT-Eesti-Pro-Text-Regular';
+                src: url('/../../../../public/font/GTEestiProDisplay-Regular.ttf')
+                    format('truetype'); /* Safari, Android, iOS */
+            }
+
+            @font-face {
+                font-family: 'GT-Eesti-Pro-Text-Bold';
+                src: url('/../../../../public/font/GTEestiProDisplay-Bold.ttf')
+                    format('truetype'); /* Safari, Android, iOS */
+            }
+
+            @font-face {
+                font-family: 'GT-Eesti-Pro-Text-UltraBold';
+                src: url('/../../../../public/font/GTEestiProDisplay-UltraBold.ttf')
+                    format('truetype'); /* Safari, Android, iOS */
+            }
+        </style>
+        <link rel="stylesheet" href="../../public/css/main.css" />
+
+        <link
+            rel="stylesheet"
+            href="../../public/css/vendor/flex-layout.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+        />
+    </head>
+    <body>
+        <div class="loading-bar"></div>
+        <header class="header">
+            <ul class="header__left-nav">
+                <li class="header__left-nav-item">shop</li>
+                <li class="header__left-nav-item">subscribe</li>
+                <li class="header__left-nav-item">learn</li>
+            </ul>
+            <div class="header__main-logo">
+                <img
+                    src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/MorningHeader_350x.png?v=1545195185"
+                    alt=""
+                />
+            </div>
+            <ul class="header__right-nav">
+                <li class="header__right-nav-item">
+                    <button class="header__preorder-btn btn btn--secondary">
+                        machine pre-order
+                    </button>
+                </li>
+                <li class="header__right-nav-item">
+                    <div class="header__account header__right-nav__icon">
+                        <img
+                            class="preload-img"
+                            src="../../public/images/preload-img.jpg"
+                            alt=""
+                        />
+                        <img
+                            class="img"
+                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/shop.png?v=1603703042"
+                            alt=""
+                        />
+                    </div>
+                </li>
+                <li class="header__right-nav-item">
+                    <div class="header__account header__right-nav__icon">
+                        <img
+                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/search.png?v=1603703014"
+                            alt=""
+                        />
+                    </div>
+                </li>
+                <li class="header__right-nav-item ">
+                    <div class="header__cart header__right-nav__icon">
+                        <img
+                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/ezgif.com-gif-maker_13e93ca6-8462-44ac-8a25-f0ea5b65da6e.png?v=1603703027"
+                            alt=""
+                        />
+                    </div>
+                </li>
+                <li class="header__right-nav-item">
+                    <div class="header__currency-dropdown">
+                        <select class="header__currency-dropdown__select">
+                            <option value="">usd</option>
+                            <option value="">sgd</option>
+                            <option value="">hkd</option>
+                            <option value="">aud</option>
+                            <option value="">nzd</option>
+                            <option value="">gbp</option>
+                        </select>
+                        <svg
+                            class="header__currency-dropdown__arrow"
+                            role="presentation"
+                            viewBox="0 0 19 12"
+                        >
+                            <polyline
+                                fill="none"
+                                stroke="#234d6b"
+                                points="17 2 9.5 10 2 2"
+                                fill-rule="evenodd"
+                                stroke-width="2"
+                                stroke-linecap="square"
+                            ></polyline>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__right-nav-item">
+                    <div class="header__currency-dropdown">
+                        <select class="header__currency-dropdown__select">
+                            <option value="">usd</option>
+                            <option value="">sgd</option>
+                            <option value="">hkd</option>
+                            <option value="">aud</option>
+                            <option value="">nzd</option>
+                            <option value="">gbp</option>
+                        </select>
+                        <svg
+                            class="header__currency-dropdown__arrow"
+                            role="presentation"
+                            viewBox="0 0 19 12"
+                        >
+                            <polyline
+                                fill="none"
+                                stroke="#234d6b"
+                                points="17 2 9.5 10 2 2"
+                                fill-rule="evenodd"
+                                stroke-width="2"
+                                stroke-linecap="square"
+                            ></polyline>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <main class="main">
+            <!-- Section Collection -->
+            <div class="section-collection">
+                <div class="row">
+                    <div class="col-md-3 col-xs-12">
+                        <h1 class="section-collection__heading">
+                            flavor forward
+                        </h1>
+                        <h4 class="section-collection__sub-heading">
+                            Coffees that pack a punch.
+                        </h4>
+                        <p class="section-collection__description">
+                            These coffees shine as an iced coffee, perfect for
+                            the summer heat.
+                        </p>
+                    </div>
+                    <div class="col-md-9 col-xs-12">
+                        <div class="carousel">
+                            <div class="carousel__item carousel-cell">
+                                <div class="carousel__item__thumb">
+                                    <img
+                                        src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                        alt=""
+                                    />
+                                </div>
+                                <p class="carousel__item__title">
+                                    textured & strong
+                                </p>
+                            </div>
+                            <div class="carousel__item carousel-cell">
+                                <div class="carousel__item__thumb">
+                                    <img
+                                        src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                        alt=""
+                                    />
+                                </div>
+                                <p class="carousel__item__title">
+                                    textured & strong
+                                </p>
+                            </div>
+                            <div class="carousel__item carousel-cell">
+                                <div class="carousel__item__thumb">
+                                    <img
+                                        src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                        alt=""
+                                    />
+                                </div>
+                                <p class="carousel__item__title">
+                                    textured & strong
+                                </p>
+                            </div>
+                            <div class="carousel__item carousel-cell">
+                                <div class="carousel__item__thumb">
+                                    <img
+                                        src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                        alt=""
+                                    />
+                                </div>
+                                <p class="carousel__item__title">
+                                    textured & strong
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section Capsules -->
+            <div class="section-capsules">
+                <div class="sub-nav">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="layout-switch">
+                                <button class="layout-switch__two">
+                                    <svg
+                                        class="Icon Icon--wall-2"
+                                        role="presentation"
+                                        viewBox="0 0 36 36"
+                                    >
+                                        <path
+                                            fill="#234d6b"
+                                            d="M21 36V21h15v15H21zm0-36h15v15H21V0zM0 21h15v15H0V21zM0 0h15v15H0V0z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                                <button class="layout-switch__three">
+                                    <svg
+                                        class="Icon Icon--wall-4"
+                                        role="presentation"
+                                        viewBox="0 0 36 36"
+                                    >
+                                        <path
+                                            fill="#234d6b"
+                                            d="M28 36v-8h8v8h-8zm0-22h8v8h-8v-8zm0-14h8v8h-8V0zM14 28h8v8h-8v-8zm0-14h8v8h-8v-8zm0-14h8v8h-8V0zM0 28h8v8H0v-8zm0-14h8v8H0v-8zM0 0h8v8H0V0z"
+                                        ></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="sub-nav__item">
+                                        <div class="sub-nav__item__icon">
+                                            <img
+                                                src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/Untitled-5_center-01_8459eeec-ce7a-4d72-bbde-d6527d69666c_200x200.png?v=1562921188"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="sub-nav__item__title">
+                                            Nespresso® Compatible <br />
+                                            Coffee Capsules
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="sub-nav__item">
+                                        <div class="sub-nav__item__icon">
+                                            <img
+                                                src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/International-Delivery_200x200.png?v=1553447455"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="sub-nav__item__title">
+                                            International Delivery*
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="sub-nav__item">
+                                        <div class="sub-nav__item__icon">
+                                            <img
+                                                src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/Morning_Icons_v_copy_27_200x200.png?v=1574412075"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <p class="sub-nav__item__title">
+                                            Curated from the World's <br />Best
+                                            Coffee Roasters
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-capsules__inner">
+                    <div class="left-filter">
+                        <div class="collapsible-item">
+                            <button class="collapsible-item__btn">
+                                <p
+                                    class="collapsible-item__title u-heading--primary is-light-font"
+                                >
+                                    type
+                                </p>
+                                <span class="collapsible-icon collapsed"></span>
+                            </button>
+                            <div class="collapsible-item__content collapsed">
+                                <ul class="collapsible-item__list">
+                                    <li
+                                        class="collapsible-item__list-item is-selected"
+                                    >
+                                        Blend
+                                    </li>
+                                    <li class="collapsible-item__list-item">
+                                        Blend
+                                    </li>
+
+                                    <li class="collapsible-item__list-item">
+                                        Blend
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-list">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <div class="product-item__thumb">
+                                        <span
+                                            class="product-item__badge u-heading--primary"
+                                            >sold out</span
+                                        >
+                                        <img
+                                            class="preload-img"
+                                            src="../../public/images/preload-img.jpg"
+                                            alt=""
+                                        />
+                                        <img
+                                            class="img"
+                                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p
+                                        class="product-item__flavor u-heading--primary"
+                                    >
+                                        smooth & juicy
+                                    </p>
+                                    <p
+                                        class="product-item__title u-heading--primary is-light-font"
+                                    >
+                                        Anserma Caldas
+                                    </p>
+                                    <p class="product-item__location">
+                                        Colonna Coffee, United Kingdom
+                                    </p>
+                                    <button
+                                        class="btn btn--primary product-item__add-btn"
+                                        disabled
+                                    >
+                                        <span
+                                            class="product-item__add-btn__title"
+                                        >
+                                            add to cart
+                                        </span>
+                                        <span
+                                            class="product-item__add-btn__dot"
+                                        ></span>
+                                        <span
+                                            class="product-item__add-btn__price"
+                                            >$13</span
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <div class="product-item__thumb">
+                                        <img
+                                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p
+                                        class="product-item__flavor u-heading--primary"
+                                    >
+                                        smooth & juicy
+                                    </p>
+                                    <p
+                                        class="product-item__title u-heading--primary is-light-font"
+                                    >
+                                        Anserma Caldas
+                                    </p>
+                                    <p class="product-item__location">
+                                        Colonna Coffee, United Kingdom
+                                    </p>
+                                    <button
+                                        class="btn btn--primary product-item__add-btn"
+                                    >
+                                        <span
+                                            class="product-item__add-btn__title"
+                                        >
+                                            add to cart
+                                        </span>
+                                        <span
+                                            class="product-item__add-btn__dot"
+                                        ></span>
+                                        <span
+                                            class="product-item__add-btn__price"
+                                            >$13</span
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <div class="product-item__thumb">
+                                        <img
+                                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p
+                                        class="product-item__flavor u-heading--primary"
+                                    >
+                                        smooth & juicy
+                                    </p>
+                                    <p
+                                        class="product-item__title u-heading--primary is-light-font"
+                                    >
+                                        Anserma Caldas
+                                    </p>
+                                    <p class="product-item__location">
+                                        Colonna Coffee, United Kingdom
+                                    </p>
+                                    <button
+                                        class="btn btn--primary product-item__add-btn"
+                                    >
+                                        add to cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <div class="product-item__thumb">
+                                        <img
+                                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p
+                                        class="product-item__flavor u-heading--primary"
+                                    >
+                                        smooth & juicy
+                                    </p>
+                                    <p
+                                        class="product-item__title u-heading--primary is-light-font"
+                                    >
+                                        Anserma Caldas
+                                    </p>
+                                    <p class="product-item__location">
+                                        Colonna Coffee, United Kingdom
+                                    </p>
+                                    <button
+                                        class="btn btn--primary product-item__add-btn"
+                                    >
+                                        add to cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <div class="product-item__thumb">
+                                        <img
+                                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p
+                                        class="product-item__flavor u-heading--primary"
+                                    >
+                                        smooth & juicy
+                                    </p>
+                                    <p
+                                        class="product-item__title u-heading--primary is-light-font"
+                                    >
+                                        Anserma Caldas
+                                    </p>
+                                    <p class="product-item__location">
+                                        Colonna Coffee, United Kingdom
+                                    </p>
+                                    <button
+                                        class="btn btn--primary product-item__add-btn"
+                                    >
+                                        add to cart
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="product-item">
+                                    <div class="product-item__thumb">
+                                        <img
+                                            src="//cdn.shopify.com/s/files/1/0013/7700/9716/products/YoshiKato_4c965311-1ce9-466b-80b3-003b06dd98f0_1200x.png?v=1599121376"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <p
+                                        class="product-item__flavor u-heading--primary"
+                                    >
+                                        smooth & juicy
+                                    </p>
+                                    <p
+                                        class="product-item__title u-heading--primary is-light-font"
+                                    >
+                                        Anserma Caldas
+                                    </p>
+                                    <p class="product-item__location">
+                                        Colonna Coffee, United Kingdom
+                                    </p>
+                                    <button
+                                        class="btn btn--primary product-item__add-btn"
+                                    >
+                                        add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination">
+                            <div class="pagination__nav">
+                                <a
+                                    href=""
+                                    class="pagination__item pagination__link"
+                                >
+                                    <svg
+                                        role="presentation"
+                                        viewBox="0 0 11 18"
+                                    >
+                                        <path
+                                            d="M9.5 1.5L1.5 9l8 7.5"
+                                            stroke-width="2"
+                                            stroke="currentColor"
+                                            fill="none"
+                                            fill-rule="evenodd"
+                                            stroke-linecap="square"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <span class="pagination__item active">1</span>
+                                <a
+                                    href=""
+                                    class="pagination__item pagination__link"
+                                    >2</a
+                                >
+                                <a
+                                    href=""
+                                    class="pagination__item pagination__link"
+                                    >3</a
+                                >
+                                <a
+                                    href=""
+                                    class="pagination__item pagination__link"
+                                    ><svg
+                                        role="presentation"
+                                        viewBox="0 0 11 18"
+                                    >
+                                        <path
+                                            d="M1.5 1.5l8 7.5-8 7.5"
+                                            stroke-width="2"
+                                            stroke="currentColor"
+                                            fill="none"
+                                            fill-rule="evenodd"
+                                            stroke-linecap="square"
+                                        ></path></svg
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer__morning-icon">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0013/7700/9716/files/Untitled-1-Recovered.png?v=1589527394"
+                    alt=""
+                />
+            </div>
+            <div class="row email-section">
+                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                    <p class="email-section__heading">GET YOUR MORNING SCOOP</p>
+                    <p class="email-section__description">
+                        Keep yourself <strong>updated</strong> and caffeinated.
+                        Plus, <strong>enjoy 15% off</strong> your first order.
+                    </p>
+                    <form action="" class="email-section__form">
+                        <input type="email" placeholder="Your email address" />
+                        <button class="btn btn--primary" type="submit">
+                            SIGN UP
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                    <div class="content">
+                        <ul class="email-section__link-list">
+                            <li class="email-section__link">
+                                about
+                            </li>
+                            <li class="email-section__link">
+                                subscriptions
+                            </li>
+                            <li class="email-section__link">
+                                partner roasters
+                            </li>
+                        </ul>
+                        <div class="email-section__icon-list">
+                            <div class="email-section__icon">
+                                <img
+                                    src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/Morning_assets-40.png?v=1594194338"
+                                    alt=""
+                                    class="email-section__icon"
+                                />
+                            </div>
+                            <div class="email-section__icon">
+                                <img
+                                    src="../../public//images/twitter-icon.svg"
+                                    alt=""
+                                    class="email-section__icon"
+                                />
+                            </div>
+
+                            <div class="email-section__icon">
+                                <img
+                                    src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/Morning_assets-39.png?v=1594194343"
+                                    alt=""
+                                    class="email-section__icon"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                    <ul class="email-section__link-list">
+                        <li class="email-section__link">
+                            faq & shipping
+                        </li>
+                        <li class="email-section__link">
+                            terms & conditions
+                        </li>
+                        <li class="email-section__link">
+                            contact
+                        </li>
+                    </ul>
+                    <p class="email-section__company">
+                        © 2020 Akronym Pte. Ltd.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Script Tags -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script>
+            $('.carousel').flickity({
+                cellAlign: 'center',
+                prevNextButtons: true,
+                dragThreshold: 8,
+                groupCell: true,
+                contain: true,
+                pageDots: false,
+                arrowShape:
+                    'M 20,50 L 60,90 L 60,85 L 25,50  L 60,15 L 60,10 Z',
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+
+    @include respond(tab-land) {
+    }
+
+    @include respond(tab-port) {
+    }
+
+    @include respond(big-desktop) {
+    }
+}
+
+body {
+    box-sizing: border-box;
+    color: $color-1;
+    img {
+        width: 100%;
+    }
+    p {
+        color: $color-1;
+    }
+    button {
+        border: none;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+    select {
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}

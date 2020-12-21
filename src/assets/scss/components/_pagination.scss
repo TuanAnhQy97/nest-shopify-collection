@@ -1,0 +1,30 @@
+.pagination {
+    margin: 0 auto;
+    padding: 60px 0;
+    &__nav {
+        border-bottom: 1px solid #dee4e9;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    &__item {
+        color: #4495d1;
+        padding: 14px 28px;
+        font-size: 12px;
+        transition: color 0.2 sease-in-out;
+        font-family: $font-main-ubold;
+        svg {
+            width: 6px;
+            height: 10px;
+            vertical-align: -1px;
+        }
+        &.active {
+            color: $color-1;
+            box-shadow: 0 -2px #234d6b inset;
+        }
+    }
+    &__link:hover {
+        color: $color-3;
+    }
+}
