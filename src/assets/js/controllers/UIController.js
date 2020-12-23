@@ -47,7 +47,7 @@ class UiController {
                     arrowShape:
                         'M 20,50 L 60,90 L 60,85 L 25,50  L 60,15 L 60,10 Z',
                 });
-            }, 100);
+            }, 200);
         });
     }
 
