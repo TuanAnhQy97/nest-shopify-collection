@@ -42,11 +42,12 @@ class UiController {
                     dragThreshold: 8,
                     groupCell: true,
                     contain: true,
+                    freeScroll: true,
                     pageDots: false,
                     arrowShape:
                         'M 20,50 L 60,90 L 60,85 L 25,50  L 60,15 L 60,10 Z',
                 });
-            }, 100);
+            }, 70);
         });
     }
 
@@ -75,6 +76,10 @@ class UiController {
     }
 
     static initPagination(pagination) {
+        if (!pagination) {
+            $('.pagination').remove();
+            return;
+        }
         let pagString = '';
         if (pagination.page !== 1)
             pagString += `<a

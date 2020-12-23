@@ -55,22 +55,6 @@
                 </button>
             </li>
             <li class="header__right-nav-item">
-                <div class="header__account header__right-nav__icon">
-                    <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/shop.png?v=1603703042" alt="" />
-                </div>
-            </li>
-            <li class="header__right-nav-item">
-                <div class="header__account header__right-nav__icon">
-                    <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/search.png?v=1603703014" alt="" />
-                </div>
-            </li>
-            <li class="header__right-nav-item ">
-                <div class="header__cart header__right-nav__icon">
-                    <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/ezgif.com-gif-maker_13e93ca6-8462-44ac-8a25-f0ea5b65da6e.png?v=1603703027"
-                        alt="" />
-                </div>
-            </li>
-            <li class="header__right-nav-item">
                 <div class="header__currency-dropdown">
                     <select class="header__currency-dropdown__select">
                         <option value="">usd</option>
@@ -102,6 +86,22 @@
                     </svg>
                 </div>
             </li>
+            <li class="header__right-nav-item">
+                <div class="header__account header__right-nav__icon">
+                    <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/shop.png?v=1603703042" alt="" />
+                </div>
+            </li>
+            <li class="header__right-nav-item">
+                <div class="header__account header__right-nav__icon">
+                    <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/search.png?v=1603703014" alt="" />
+                </div>
+            </li>
+            <li class="header__right-nav-item ">
+                <div class="header__cart header__right-nav__icon">
+                    <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/ezgif.com-gif-maker_13e93ca6-8462-44ac-8a25-f0ea5b65da6e.png?v=1603703027"
+                        alt="" />
+                </div>
+            </li>
         </ul>
     </header>
     <main class="main">
@@ -109,16 +109,18 @@
         <div class="section-collection">
             <div class="row">
                 <div class="col-md-3 col-xs-12">
-                    <h1 class="section-collection__heading">
-                        flavor forward
-                    </h1>
-                    <h4 class="section-collection__sub-heading">
-                        Coffees that pack a punch.
-                    </h4>
-                    <p class="section-collection__description">
-                        These coffees shine as an iced coffee, perfect for
-                        the summer heat.
-                    </p>
+                    <div class="section-collection__text-wrapper">
+                        <h1 class="section-collection__heading">
+                            flavor forward
+                        </h1>
+                        <h4 class="section-collection__sub-heading">
+                            Coffees that pack a punch.
+                        </h4>
+                        <p class="section-collection__description">
+                            These coffees shine as an iced coffee, perfect for
+                            the summer heat.
+                        </p>
+                    </div>
                 </div>
                 <div class="col-md-9 col-xs-12">
                     <div class="carousel">
@@ -149,7 +151,7 @@
                     </div>
                     <div class="col-md-10">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
                                 <div class="sub-nav__item">
                                     <div class="sub-nav__item__icon">
                                         <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/Untitled-5_center-01_8459eeec-ce7a-4d72-bbde-d6527d69666c_200x200.png?v=1562921188"
@@ -161,7 +163,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
                                 <div class="sub-nav__item">
                                     <div class="sub-nav__item__icon">
                                         <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/International-Delivery_200x200.png?v=1553447455"
@@ -172,7 +174,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
                                 <div class="sub-nav__item">
                                     <div class="sub-nav__item__icon">
                                         <img src="//cdn.shopify.com/s/files/1/0013/7700/9716/files/Morning_Icons_v_copy_27_200x200.png?v=1574412075"
@@ -183,6 +185,53 @@
                                         Coffee Roasters
                                     </p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="sort-plate">
+                            <button class="sort-plate__btn">
+                                <p class="u-heading--primary is-light-font">
+                                    sort
+                                </p>
+                                <svg role="presentation" viewBox="0 0 19 12">
+                                    <polyline fill="none" stroke="currentColor" points="17 2 9.5 10 2 2"
+                                        fill-rule="evenodd" stroke-width="2" stroke-linecap="square"></polyline>
+                                </svg>
+                            </button>
+                            <div class="sort-plate__popover">
+                                <ul class="sort-plate__popover__list">
+                                    <li class="sort-plate__popover__item u-heading--primary" data-sort="manual">
+                                        Featured
+                                    </li>
+                                    <li class="sort-plate__popover__item u-heading--primary"
+                                        data-sort="price-ascending">
+                                        Price: Low to High
+                                    </li>
+                                    <li class="sort-plate__popover__item u-heading--primary"
+                                        data-sort="price-descending">
+                                        Price: High to Low
+                                    </li>
+                                    <li class="sort-plate__popover__item u-heading--primary"
+                                        data-sort="title-ascending">
+                                        Alphabetically: A-Z
+                                    </li>
+                                    <li class="sort-plate__popover__item u-heading--primary"
+                                        data-sort="title-descending">
+                                        Alphabetically: Z-A
+                                    </li>
+                                    <li class="sort-plate__popover__item u-heading--primary"
+                                        data-sort="created-ascending">
+                                        Oldest to Newest
+                                    </li>
+                                    <li class="sort-plate__popover__item u-heading--primary"
+                                        data-sort="created-descending">
+                                        Newest to Oldest
+                                    </li>
+                                    <li class="sort-plate__popover__item u-heading--primary" data-sort="best-selling">
+                                        Best Selling
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -197,7 +246,7 @@
 
                     </div>
                     <div class="pagination">
-                         <div class="pagination__nav"></div>
+                        <div class="pagination__nav"></div>
                     </div>
                 </div>
             </div>

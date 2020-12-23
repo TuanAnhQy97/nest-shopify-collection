@@ -25,6 +25,11 @@
             &:not(:last-child) {
                 margin-right: 30px;
             }
+            @include respond(tab-land) {
+                &:not(:first-child) {
+                    display: none;
+                }
+            }
         }
     }
     &__main-logo {
@@ -34,16 +39,21 @@
     &__right-nav {
         flex: 1;
         display: flex;
+        justify-content: flex-end;
         align-items: center;
         &-item:not(:last-child) {
-            cursor: pointer;
             margin-right: 12px;
-        }
-        li:first-child {
-            margin-left: auto;
         }
         &__icon {
             width: 30px;
+        }
+        &-item {
+            cursor: pointer;
+            @include respond(tab-land) {
+                &:not(:nth-last-child(2)):not(:last-child) {
+                    display: none;
+                }
+            }
         }
     }
     &__preorder-btn {

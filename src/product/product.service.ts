@@ -17,17 +17,63 @@ export class ProductService {
 
     async getProductsByTagAndSort(
         tags?: string[],
-        sort?: string,
+        sortBy?: string,
     ): Promise<Product[] | []> {
-        if (!tags.length && !sort) return [];
-        const regexTags = tags.map(tag => {
-            return new RegExp(tag, 'i');
-        });
-        const products = await this.productModel
-            .find()
-            .where('tags')
-            .in(regexTags)
-            .exec();
+        if (!tags.length && !sortBy) return [];
+
+        let products = await this.productModel.find().exec();
+
+        if (tags.length)
+            products = products.filter(p => {
+                const tagsString = p.tags.join().toLowerCase();
+                return tags.every(t => tagsString.includes(t));
+            });
+        if (!sortBy) return products;
+        switch (sortBy) {
+            case 'manual':
+            case 'best-selling': {
+                products = products
+                    .map(p => ({ sort: Math.random(), value: p }))
+                    .sort((a, b) => a.sort - b.sort)
+                    .map(a => a.value);
+                products = products.slice(0, 20);
+                break;
+            }
+            case 'price-ascending': {
+                products = products.sort(
+                    (a, b) => +a.variants[0].price - +b.variants[0].price,
+                );
+                break;
+            }
+            case 'price-descending': {
+                products = products.sort(
+                    (a, b) => +a.variants[0].price - +b.variants[0].price,
+                );
+                break;
+            }
+            case 'title-ascending': {
+                products = products.sort((a, b) => {
+                    if (a.title.toLowerCase() < b.title.toLowerCase())
+                        return -1;
+                    if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+                    return 0;
+                });
+                break;
+            }
+            case 'title-descending': {
+                products = products.sort((a, b) => {
+                    if (a.title.toLowerCase() < b.title.toLowerCase()) return 1;
+                    if (a.title.toLowerCase() > b.title.toLowerCase())
+                        return -1;
+                    return 0;
+                });
+                break;
+            }
+            case 'created-descending': {
+                products = products.reverse();
+                break;
+            }
+        }
         return products;
     }
 
@@ -41,7 +87,6 @@ export class ProductService {
         };
     }> {
         const PAGE_SIZE = 20;
-
         const [products, count] = await Promise.all([
             this.productModel
                 .find()

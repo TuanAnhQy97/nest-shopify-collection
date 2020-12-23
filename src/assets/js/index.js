@@ -1,8 +1,10 @@
 import UIController from './controllers/UIController';
 import EventController from './controllers/EventController';
+import DataController from './controllers/DataController';
 
-console.log(productList);
+// console.log(productList);
 const init = () => {
+    DataController.init();
     UIController.initCarousel(punchProducts);
     UIController.renderProductList(productList.products);
     UIController.initFilterList(filterList);

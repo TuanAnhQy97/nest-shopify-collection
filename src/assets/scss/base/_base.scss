@@ -41,7 +41,7 @@ body {
     }
     select {
         cursor: pointer;
-
+        color: $color-1;
         &:focus {
             outline: none;
         }

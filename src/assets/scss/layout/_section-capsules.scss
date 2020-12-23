@@ -2,6 +2,10 @@
     padding-left: 80px;
     padding-right: 30px;
     margin-top: 40px;
+    @include respond(tab-port) {
+        margin-top: 10px;
+        padding: 0 20px;
+    }
     &__inner {
         display: flex;
         margin-top: 60px;
@@ -13,6 +17,9 @@
         flex-shrink: 0;
         align-self: flex-start;
         margin-right: 26px;
+        @include respond(small-phone) {
+            display: none;
+        }
     }
     .collapsible-item {
         &__btn {
@@ -139,12 +146,22 @@
     z-index: 3;
     top: 60px;
     border-bottom: 1px solid $color-1;
+
     & > .row {
         align-items: center;
         div[class^='col'] {
             padding-top: 0;
             padding-bottom: 0;
         }
+    }
+    @include respond(tab-port) {
+        border: none;
+        .row .col-md-1:last-child {
+            margin: 0 auto;
+        }
+    }
+    @include respond(small-tab-port) {
+        top: -70px;
     }
     .layout-switch {
         button {
@@ -153,10 +170,17 @@
         &__two {
             margin-right: 10px;
         }
+        @include respond(tab-port) {
+            display: none;
+        }
     }
     &__item {
         display: flex;
         align-items: center;
+        @include respond(small-tab-port) {
+            flex-direction: column;
+            padding: 0 10px;
+        }
         &__icon {
             width: 70px;
         }

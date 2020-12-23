@@ -36,7 +36,7 @@ const AppService = {
             style: 'currency',
             currency: 'USD',
             minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
+            maximumFractionDigits: 2,
         });
 
         return formatter.format(+price);
@@ -70,6 +70,24 @@ const AppService = {
             tags,
             sortBy,
         };
+    },
+
+    genAPIqueryString: (tags, sortBy) => {
+        let queryString = '/api/products/';
+        if (tags.length) queryString += tags.join('+');
+        queryString += sortBy
+            ? `?sort_by=${sortBy}`
+            : `?sort_by=title-asending`;
+        return queryString;
+    },
+    genWebqueryString: (tags, sortBy) => {
+        let queryString = '/';
+        if (tags.length) queryString += tags.join('+');
+        queryString += sortBy
+            ? `?sort_by=${sortBy}`
+            : `?sort_by=title-asending`;
+
+        return queryString;
     },
 };
 

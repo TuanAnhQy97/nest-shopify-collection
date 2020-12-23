@@ -1,0 +1,54 @@
+.sort-plate {
+    position: relative;
+    &__btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border-left: 1px solid $color-1;
+        padding: 8px 20px;
+        svg {
+            height: 6px;
+            margin-left: 2px;
+            display: inline-block;
+            width: 1em;
+            fill: $color-1;
+            vertical-align: middle;
+            stroke-width: 1px;
+            background: none;
+        }
+        @include respond(tab-port) {
+            border: none;
+        }
+    }
+    &__popover {
+        display: none;
+        top: 44px;
+        position: absolute;
+        background-color: #f9f5f0;
+        box-shadow: 0 -2px 10px rgba(54, 54, 54, 0.2);
+        right: 0;
+        z-index: 50;
+        &::before {
+            content: '';
+            position: absolute;
+            right: 40px;
+            width: 10px;
+            height: 10px;
+            border-style: solid;
+            bottom: 100%;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #f9f5f0 transparent;
+            -webkit-filter: drop-shadow(0 -2px 2px rgba(54, 54, 54, 0.2));
+            filter: drop-shadow(0 -2px 2px rgba(54, 54, 54, 0.2));
+        }
+        &__list {
+            padding: 10px;
+        }
+        &__item {
+            padding: 15px 40px;
+            white-space: nowrap;
+            text-align: right;
+            cursor: pointer;
+        }
+    }
+}
